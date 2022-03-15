@@ -8,13 +8,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.Optional;
 
 public class UITest 
 {
 
 	@Parameters("Chrome")
 	@Test
-	public void startBrowser(String browserName)
+	public void startBrowser(@Optional("Chrome") String browserName)
 	{
 		System.out.println("Parameter value is "+browserName);
 		WebDriver driver=null;
